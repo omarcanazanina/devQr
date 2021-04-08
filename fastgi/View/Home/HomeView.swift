@@ -177,8 +177,8 @@ struct HomeView: View {
                     VStack{
                         Image(systemName: "viewfinder")
                             .resizable()
-                            .frame(width:20, height: 20)
-                            .padding(25)
+                            .frame(width:35, height: 35)
+                            .padding(15)
                             .foregroundColor(Color.white)
                         Text("Scan")
                             .foregroundColor(Color.white)
@@ -186,7 +186,7 @@ struct HomeView: View {
                     }
                     
                 }
-                // .frame(width:100, height: 100)
+                 .frame(width:100, height: 100)
                  .background(Color("primary"))
                  .cornerRadius(10)
                  .padding(5)
@@ -273,8 +273,8 @@ struct HomeView: View {
                     VStack{
                         Image(systemName: "barcode")
                             .resizable()
-                            .frame(width:20, height: 20)
-                            .padding(25)
+                            .frame(width:35, height: 35)
+                            .padding(15)
                             .foregroundColor(Color.white)
                         Text("Pagar")
                             .foregroundColor(Color.white)
@@ -282,7 +282,7 @@ struct HomeView: View {
                     }
                     
                 }
-                // .frame(width:100, height: 100)
+                 .frame(width:100, height: 100)
                  .background(Color("primary"))
                  .cornerRadius(10)
                  .padding(5)
@@ -306,8 +306,8 @@ struct HomeView: View {
                     VStack{
                         Image(systemName: "qrcode")
                             .resizable()
-                            .frame(width:20, height: 20)
-                            .padding(25)
+                            .frame(width:35, height: 35)
+                            .padding(15)
                             .foregroundColor(Color.white)
                         Text("Recibir")
                             .foregroundColor(Color.white)
@@ -315,7 +315,7 @@ struct HomeView: View {
                     }
                     
                 }
-               // .frame(width:100, height: 100)
+                .frame(width:100, height: 100)
                 .background(Color("primary"))
                 .cornerRadius(10)
                 .padding(5)

@@ -22,7 +22,8 @@ struct TransactionDetailView: View {
     
     let dateFormatter = DateFormatter()
     var dateStringFormatter = DateFormatter()
-    
+    //imagen
+    @State private var showingAlert = false
     //datos user
     @ObservedObject var userDataVM = UserDataViewModel()
     var navigationRoot = NavigationRoot()
@@ -52,7 +53,7 @@ struct TransactionDetailView: View {
             .frame(width: 80, height: 80)
     }
     
-    var body: some View {
+    var vista: some View {
         VStack(alignment: .center, spacing: 10){
             self.logo
                 .padding(.top,30)
@@ -149,7 +150,7 @@ struct TransactionDetailView: View {
                         .textStyle(TitleStyle())
                         .frame(maxWidth: .infinity, alignment: .trailing)
                     
-                    Text("+591 \(self.phone) ")
+                    Text("+591 \(self.userDataVM.user.telefono)")
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
                 }
@@ -184,7 +185,7 @@ struct TransactionDetailView: View {
                         .textStyle(TitleStyle())
                         .frame(maxWidth: .infinity, alignment: .trailing)
                     
-                    Text("\(self.monto).00 Bs.)")
+                    Text("\(self.monto).00 Bs.")
                         .foregroundColor(.black)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
@@ -209,24 +210,39 @@ struct TransactionDetailView: View {
                 
             }
             Spacer()
-            HStack{
-                if self.showBtn! {
-                    Button(action: {
-                       // self.exportToPDF(fecha_: self.fechaFormat, empresa_: self.empresa, phone_: self.phone, monto_: self.monto,fechaFormat_: self.fechaFormat, horaFormat_: self.horaFormat, showBtn_: false, nombreO_: self.userDataVM.user.nombres, hora_: self.hora)
-                    }){
-                        Text("Compartir")
-                    }.buttonStyle(PrimaryButtonOutlineStyle())
-                    
-                }
-                Button(action: {
-                    self.navigationRoot.setRootView()
-                })
-                {
-                    Text("Aceptar")
-                }.buttonStyle(PrimaryButtonOutlineStyle())
-            }
+         
         }
         .background(Color.white)
+    }
+    
+    var body: some View {
+        ScrollView{
+            VStack(){
+                self.vista
+                HStack{
+                    //if self.showBtn! {
+                        Button(action: {
+                           // self.exportToPDF(fecha_: self.fechaFormat, empresa_: self.empresa, phone_: self.phone, monto_: self.monto,fechaFormat_: self.fechaFormat, horaFormat_: self.horaFormat, showBtn_: false, nombreO_: self.userDataVM.user.nombres, hora_: self.hora)
+                            let image = self.vista.snapshot()
+                            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+                            showingAlert = true
+                        }){
+                            Text("Descargar")
+                        }.buttonStyle(PrimaryButtonOutlineStyle())
+                        .alert(isPresented: $showingAlert) {
+                            Alert(title: Text("Fastgi"), message: Text("Descarga completa"), dismissButton: .default(Text("Aceptar")))
+                        }
+                    //}
+                    Button(action: {
+                        self.navigationRoot.setRootView()
+                    })
+                    {
+                        Text("Aceptar")
+                    }.buttonStyle(PrimaryButtonOutlineStyle())
+                }
+            }
+            .background(Color.white)
+        }
     }
 }
     struct TransactionDetailView_Previews: PreviewProvider {
