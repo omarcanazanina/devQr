@@ -184,7 +184,7 @@ struct TransactionDetailView: View {
                         .textStyle(TitleStyle())
                         .frame(maxWidth: .infinity, alignment: .trailing)
                     
-                    Text("\(self.monto).00 Bs. \(self.userDataVM.user.nombres ?? "")")
+                    Text("\(self.monto).00 Bs.)")
                         .foregroundColor(.black)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
