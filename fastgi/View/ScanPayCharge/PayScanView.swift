@@ -11,6 +11,7 @@ import SDWebImageSwiftUI
 
 struct PayScanView: View {
     var dataUserPay: UpdateUserPagoModel
+    var dataUser: UserModel
     @State private var monto: String = ""
     //
     @Binding var montoPagoQR : String
@@ -55,23 +56,23 @@ struct PayScanView: View {
                 
             }
             if self.montoPagoQR == "" {
-                if self.dataUserPay.nombres == Optional(""){
-                    NavigationLink(destination: TransactionDetailChargePayView(fecha: "", hora: "", empresa: "cobro", phone: "", monto: self.monto, abonado: "+591 \(self.dataUserPay.telefono)", control: 1, fechaFormat: "", horaFormat: "") , tag: 1, selection: self.$action) {
+                if self.dataUserPay.nombres == Optional("") {
+                    NavigationLink(destination: TransactionDetailChargePayView(fecha: "", hora: "", empresa: "cobro", phone: "", monto: self.monto, abonado: "+591 \(self.dataUserPay.telefono)", dataUser: self.dataUser, control: 1, fechaFormat: "", horaFormat: "") , tag: 1, selection: self.$action) {
                         EmptyView()
                     }
                 }else{
-                    NavigationLink(destination: TransactionDetailChargePayView(fecha: "", hora: "", empresa: "cobro", phone: "", monto: self.monto, abonado: "\(self.dataUserPay.nombres) \(self.dataUserPay.apellidos)", control: 1, fechaFormat: "", horaFormat: "") , tag: 1, selection: self.$action) {
+                    NavigationLink(destination: TransactionDetailChargePayView(fecha: "", hora: "", empresa: "cobro", phone: "", monto: self.monto, abonado: "\(self.dataUserPay.nombres) \(self.dataUserPay.apellidos)", dataUser: self.dataUser, control: 1, fechaFormat: "", horaFormat: "") , tag: 1, selection: self.$action) {
                         EmptyView()
                     }
                 }
-              
+                
             }else{
-                if self.dataUserPay.nombres == Optional(""){
-                    NavigationLink(destination: TransactionDetailChargePayView(fecha: "", hora: "", empresa: "cobro", phone: "", monto: self.montoPagoQR, abonado: "+591 \(self.dataUserPay.telefono)", control: 1, fechaFormat: "", horaFormat: "") , tag: 1, selection: self.$action) {
+                if self.dataUserPay.nombres == Optional("") {
+                    NavigationLink(destination: TransactionDetailChargePayView(fecha: "", hora: "", empresa: "cobro", phone: "", monto: self.montoPagoQR, abonado: "+591 \(self.dataUserPay.telefono)", dataUser: self.dataUser, control: 1, fechaFormat: "", horaFormat: "") , tag: 1, selection: self.$action) {
                         EmptyView()
                     }
                 }else{
-                    NavigationLink(destination: TransactionDetailChargePayView(fecha: "", hora: "", empresa: "cobro", phone: "", monto: self.montoPagoQR, abonado: "\(self.dataUserPay.nombres) \(self.dataUserPay.apellidos)", control: 1, fechaFormat: "", horaFormat: "") , tag: 1, selection: self.$action) {
+                    NavigationLink(destination: TransactionDetailChargePayView(fecha: "", hora: "", empresa: "cobro", phone: "", monto: self.montoPagoQR, abonado: "\(self.dataUserPay.nombres) \(self.dataUserPay.apellidos)", dataUser: self.dataUser, control: 1, fechaFormat: "", horaFormat: "") , tag: 1, selection: self.$action) {
                         EmptyView()
                     }
                 }

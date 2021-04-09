@@ -250,10 +250,10 @@ struct HomeView: View {
                 }
               
             }
-            NavigationLink(destination: ChargeView(dataUserPay: self.userDataVM.userResponsePay, montoCobroQR: self.$montoCobroQR), tag: 11, selection: self.$action) {
+            NavigationLink(destination: ChargeView(dataUserPay: self.userDataVM.userResponsePay, dataUser: self.userDataVM.user, montoCobroQR: self.$montoCobroQR), tag: 11, selection: self.$action) {
                 EmptyView()
             }
-            NavigationLink(destination: PayScanView(dataUserPay: self.userDataVM.userResponsePay, montoPagoQR: self.$montoPagoQR), tag: 10, selection: self.$action) {
+            NavigationLink(destination: PayScanView(dataUserPay: self.userDataVM.userResponsePay, dataUser: self.userDataVM.user, montoPagoQR: self.$montoPagoQR), tag: 10, selection: self.$action) {
                 EmptyView()
             }
            /* NavigationLink(destination: ChargeView(dataUserPay: self.userDataVM.userResponsePay), isActive: self.$userDataVM.nextPayview) {
@@ -380,9 +380,9 @@ struct HomeView: View {
                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                         .padding(.vertical,10)
                     HStack{
-                        CardServiceHomeView( logo: "Entel", isSelect: false, currentBtnEm: self.$currentBtnEm, btn: .Entel)
-                        CardServiceHomeView(logo: "Viva", isSelect: false, currentBtnEm: self.$currentBtnEm, btn: .Viva)
-                        CardServiceHomeView(logo: "Tigo", isSelect: false, currentBtnEm: self.$currentBtnEm, btn: .Tigo)
+                        CardServiceHomeView( logo: "Entel", dataUser: self.userDataVM.user, isSelect: false, currentBtnEm: self.$currentBtnEm, btn: .Entel)
+                        CardServiceHomeView(logo: "Viva", dataUser: self.userDataVM.user, isSelect: false, currentBtnEm: self.$currentBtnEm, btn: .Viva)
+                        CardServiceHomeView(logo: "Tigo", dataUser: self.userDataVM.user, isSelect: false, currentBtnEm: self.$currentBtnEm, btn: .Tigo)
                     }
                 }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                 VStack{

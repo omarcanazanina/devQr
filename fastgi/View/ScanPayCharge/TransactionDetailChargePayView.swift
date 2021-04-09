@@ -14,6 +14,7 @@ struct TransactionDetailChargePayView: View {
     var phone: String
     var monto: String
     var abonado: String
+    var dataUser: UserModel
     var control: Int
     //fechaformat
     let date = Date()
@@ -140,12 +141,12 @@ struct TransactionDetailChargePayView: View {
                         .textStyle(TitleStyle())
                         .frame(maxWidth: .infinity, alignment: .trailing)
                     //comentado
-                    if self.userDataVM.user.nombres == Optional(""){
-                        Text ("+591 \(self.userDataVM.user.telefono)")//("\(self.userDataVM.user.nombres) \(self.userDataVM.user.apellidos)")
+                    if self.dataUser.nombres == Optional("") || self.dataUser.nombres == nil{
+                        Text ("+591 \(self.dataUser.telefono)")//("\(self.userDataVM.user.nombres) \(self.userDataVM.user.apellidos)")
                             .foregroundColor(.black)
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }else{
-                        Text ("\(self.userDataVM.user.nombres ?? "") \(self.userDataVM.user.apellidos ?? "")")
+                        Text ("\(self.dataUser.nombres ?? "") \(self.dataUser.apellidos ?? "")")
                             .foregroundColor(.black)
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
@@ -227,7 +228,7 @@ struct TransactionDetailChargePayView: View {
     }
 }
 
-struct TransactionDetailChargePayView_Previews: PreviewProvider {
+/*struct TransactionDetailChargePayView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             TransactionDetailView(fecha: "", hora: "", empresa: "", phone: "", monto: "", control: 0, fechaFormat: "", horaFormat: "")
@@ -235,7 +236,7 @@ struct TransactionDetailChargePayView_Previews: PreviewProvider {
                 .preferredColorScheme(.dark)
         }
     }
-}
+}*/
 
 /*
 extension TransactionDetailChargePayView {

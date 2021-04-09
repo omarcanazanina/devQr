@@ -12,8 +12,9 @@ struct HistoryView: View {
     @ObservedObject var recargas = Recargas()
     @State private var optionPicker:Int = 0
     @ObservedObject var RecargaVM = RecargaViewModel()
-    //ruta
-    //@ObservedObject var login = Login()
+    @ObservedObject var userDataVM = UserDataViewModel()
+    //test user
+    //var dataUser: UserModel
     //
     @State private var fecha :String = ""
     @State private var hora :String = ""
@@ -144,7 +145,7 @@ struct HistoryView: View {
                 }
                 if(optionPicker==0){
                     self.list
-                    NavigationLink(destination: TransactionDetailView(fecha: self.fecha, hora: self.hora, empresa: self.empresa, phone: self.phone, monto: self.monto, control: 0, fechaFormat: "", horaFormat: ""), tag: 1, selection: self.$action) {
+                    NavigationLink(destination: TransactionDetailView(fecha: self.fecha, hora: self.hora, empresa: self.empresa, phone: self.phone, monto: self.monto, dataUser: self.userDataVM.user, control: 0, fechaFormat: "", horaFormat: ""), tag: 1, selection: self.$action) {
                         EmptyView()
                     }
                 }

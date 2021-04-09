@@ -13,6 +13,7 @@ struct TransactionDetailView: View {
     var empresa: String
     var phone: String
     var monto: String
+    var dataUser: UserModel
     var control: Int
     //fechaformat
     let date = Date()
@@ -79,7 +80,7 @@ struct TransactionDetailView: View {
                     
                 }
                 HStack{
-                    Text("FECHA")
+                    Text("FECHA \(self.dataUser.telefono)")
                         .foregroundColor(Color("primary"))
                         .bold()
                         .textStyle(TitleStyle())
@@ -133,15 +134,28 @@ struct TransactionDetailView: View {
                         .textStyle(TitleStyle())
                         .frame(maxWidth: .infinity, alignment: .trailing)
                     //comentado
-                    if self.userDataVM.user.nombres == Optional(""){
-                        Text ("+591 \(self.userDataVM.user.telefono)")//("\(self.userDataVM.user.nombres) \(self.userDataVM.user.apellidos)")
-                            .foregroundColor(.black)
-                            .frame(maxWidth: .infinity, alignment: .leading)
+                    if self.control == 0 {
+                        if self.userDataVM.user.nombres == Optional(""){
+                            Text ("+591 \(self.userDataVM.user.telefono)")//("\(self.userDataVM.user.nombres) \(self.userDataVM.user.apellidos)")
+                                .foregroundColor(.black)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                        }else{
+                            Text ("\(self.userDataVM.user.nombres ?? "") \(self.userDataVM.user.apellidos ?? "")")
+                                .foregroundColor(.black)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                        }
                     }else{
-                        Text ("\(self.userDataVM.user.nombres ?? "") \(self.userDataVM.user.apellidos ?? "")")
-                            .foregroundColor(.black)
-                            .frame(maxWidth: .infinity, alignment: .leading)
+                        if self.dataUser.nombres == Optional(""){
+                            Text ("+591 \(self.dataUser.telefono)")//("\(self.userDataVM.user.nombres) \(self.userDataVM.user.apellidos)")
+                                .foregroundColor(.black)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                        }else{
+                            Text ("\(self.dataUser.nombres ?? "") \(self.dataUser.apellidos ?? "")")
+                                .foregroundColor(.black)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                        }
                     }
+                   
                 }
                 HStack{
                     Text("NÚMERO")
@@ -149,9 +163,14 @@ struct TransactionDetailView: View {
                         .bold()
                         .textStyle(TitleStyle())
                         .frame(maxWidth: .infinity, alignment: .trailing)
-                    
-                    Text("+591 \(self.userDataVM.user.telefono)")
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                    if self.control == 0 {
+                        Text("+591 \(self.userDataVM.user.telefono)")
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }else{
+                        Text("+591 \(self.dataUser.telefono)")
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                   
                     
                 }
                 
@@ -245,7 +264,8 @@ struct TransactionDetailView: View {
         }
     }
 }
-    struct TransactionDetailView_Previews: PreviewProvider {
+
+/*    struct TransactionDetailView_Previews: PreviewProvider {
         static var previews: some View {
             Group {
                 TransactionDetailView(fecha: "", hora: "", empresa: "", phone: "", monto: "", control: 0, fechaFormat: "", horaFormat: "")
@@ -253,9 +273,9 @@ struct TransactionDetailView: View {
                     .preferredColorScheme(.dark)
             }
         }
-    }
+    }*/
 
-
+/*
 extension TransactionDetailView {
     func exportToPDF(fecha_: String, empresa_: String, phone_: String, monto_: String,fechaFormat_: String,horaFormat_:String, showBtn_: Bool, nombreO_: String, hora_: String) {
         
@@ -268,7 +288,7 @@ extension TransactionDetailView {
         let width: CGFloat = 8.5 * 72.0
         //Estimate the height of your view
         let height: CGFloat = 1000
-        let charts = TransactionDetailView(fecha: fecha_, hora: hora_, empresa: empresa_, phone: phone_, monto: monto_, control: 0,fechaFormat: fechaFormat_,horaFormat: horaFormat_, showBtn: showBtn_)
+        let charts = TransactionDetailView(fecha: fecha_, hora: hora_, empresa: empresa_, phone: phone_, monto: monto_, dataUser: <#UserModel#>, control: 0,fechaFormat: fechaFormat_,horaFormat: horaFormat_, showBtn: showBtn_)
         
         let pdfVC = UIHostingController(rootView: charts)
         pdfVC.view.frame = CGRect(x: 0, y: 0, width: width, height: height)
@@ -304,3 +324,4 @@ extension TransactionDetailView {
     }
     
 }
+*/

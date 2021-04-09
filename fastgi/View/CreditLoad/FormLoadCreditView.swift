@@ -11,6 +11,7 @@ import Introspect
 struct FormLoadCreditView: View {
 //    var contContacts : Int
     var empresa: String
+    var dataUser: UserModel
     @State  var selectEm :BtnEm
     @State private  var telefono = ""
     @State var MontoRecarga1: BtnCA
@@ -139,7 +140,7 @@ struct FormLoadCreditView: View {
             }
             //end
             if self.RecargaVM.control != ""{
-                NavigationLink(destination: TransactionDetailView(fecha: "", hora: "", empresa:  self.RecargaVM.recargaData.empresa, phone: self.RecargaVM.recargaData.telefono, monto: self.RecargaVM.recargaData.recarga, control: 1, fechaFormat: "", horaFormat: ""), tag: 1, selection: self.$action) {
+                NavigationLink(destination: TransactionDetailView(fecha: "", hora: "", empresa:  self.RecargaVM.recargaData.empresa, phone: self.RecargaVM.recargaData.telefono, monto: self.RecargaVM.recargaData.recarga, dataUser: self.dataUser, control: 1, fechaFormat: "", horaFormat: ""), tag: 1, selection: self.$action) {
                         EmptyView()
                 }
                 
@@ -177,9 +178,9 @@ struct FormLoadCreditView: View {
     }
 }
 
-struct FormLoadCreditView_Previews: PreviewProvider {
+/*struct FormLoadCreditView_Previews: PreviewProvider {
     static var previews: some View {
        // FormLoadCreditView(SelectEm: .Entel, montoRecarga1: .Btn10, montoRecarga: "")
         FormLoadCreditView( empresa: "", selectEm: .Tigo, MontoRecarga1: .Btn30, MontoRecarga: "")
     }
-}
+}*/
