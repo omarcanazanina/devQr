@@ -449,7 +449,7 @@ struct HomeView: View {
            
             
            // Text(self.resultadosScan)
-            Button(action: {
+          /*  Button(action: {
                 self.action = 15
             }){
                 Text("Caja")
@@ -457,7 +457,7 @@ struct HomeView: View {
             
             NavigationLink(destination: FormLoadBoxView(MontoRecarga1: .Btn30) , tag: 15, selection: self.$action) {
          EmptyView()
-         }
+         }*/
         }
     }
     
