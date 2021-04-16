@@ -403,10 +403,10 @@ struct HomeView: View {
                Button(action: {
                    self.action = 44
                }){
-                 //Text("test1")
+                 Text("test1")
                  }
                     
-                    NavigationLink(destination: DetalleTelefericoView(), tag: 44, selection: self.$action) {
+                    NavigationLink(destination: TestView(), tag: 44, selection: self.$action) {
                  EmptyView()
                  }
                     /* //modal test

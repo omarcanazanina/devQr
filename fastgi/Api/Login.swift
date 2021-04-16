@@ -22,7 +22,7 @@ class Login: ObservableObject {
     @EnvironmentObject private var authState : AuthState
     private let tokenKey = "token"
     private let idKey = "usuario._id"
-    
+    private let tokenDevice = "tokenDevice"
     //Storage
     private let storage = UserDefaults.standard
     //rutas
@@ -74,6 +74,7 @@ class Login: ObservableObject {
     func confirmCode(telefono:String,pin:String) {
        // self.iscomplete = false
         self.isloading = true
+        print("desde el login \(storage.string(forKey: tokenDevice))")
         let parametros : Parameters = [
             "telefono": telefono,
             "pin": pin

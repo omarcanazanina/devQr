@@ -7,10 +7,49 @@
 
 import SwiftUI
 import UIKit
+import PopupView
 struct TestView: View {
+    @State var isShowingPopUp = false
+    
     var body: some View {
-        Home()
+            VStack{
+                Button(action: {
+                    self.isShowingPopUp = true
+                })
+                {
+                    Text("test")
+                        
+                } .popup(isPresented: $isShowingPopUp, type: .floater(verticalPadding: 80), position: .top, animation: .easeIn, autohideIn: 3, closeOnTap: true, closeOnTapOutside: false, view: {
+                    Toast()
+                })
+               
+              
+            }
+      
+      
+       // Home()
        
+    }
+}
+
+struct Toast : View {
+    var body: some View {
+        ZStack{
+            Color.green
+            HStack{
+                Image(systemName: "person")
+                    .resizable()
+                    .frame(width: 35,height: 35,alignment: .center)
+                    .foregroundColor(Color.white )
+                    .padding()
+                Text("Esta es una notificacion ")
+                    .foregroundColor(.white)
+            }
+            .padding()
+        }
+        .frame(height: 45)
+        .cornerRadius(12)
+        .padding()
     }
 }
 

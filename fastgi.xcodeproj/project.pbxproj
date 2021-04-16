@@ -19,6 +19,7 @@
 		9240081F26014DFE00B75AE3 /* PayScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9240081E26014DFE00B75AE3 /* PayScanView.swift */; };
 		924008242601548A00B75AE3 /* QrPayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924008232601548A00B75AE3 /* QrPayView.swift */; };
 		9240083326015B0400B75AE3 /* TransactionDetailChargePayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9240083226015B0400B75AE3 /* TransactionDetailChargePayView.swift */; };
+		924951E72629DDCF0033A96D /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 924951E62629DDCF0033A96D /* PopupView */; };
 		92543454260A44A600AE5F40 /* HorizonCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 92543453260A44A600AE5F40 /* HorizonCalendar */; };
 		925F07282580323000153B5A /* Afiliacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F07272580323000153B5A /* Afiliacion.swift */; };
 		925F072B2580372B00153B5A /* AfiliacionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F072A2580372B00153B5A /* AfiliacionViewModel.swift */; };
@@ -143,6 +144,7 @@
 		9240081E26014DFE00B75AE3 /* PayScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayScanView.swift; sourceTree = "<group>"; };
 		924008232601548A00B75AE3 /* QrPayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrPayView.swift; sourceTree = "<group>"; };
 		9240083226015B0400B75AE3 /* TransactionDetailChargePayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailChargePayView.swift; sourceTree = "<group>"; };
+		924951DA2629DB430033A96D /* fastgi wallet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "fastgi wallet.entitlements"; sourceTree = "<group>"; };
 		925F07272580323000153B5A /* Afiliacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Afiliacion.swift; sourceTree = "<group>"; };
 		925F072A2580372B00153B5A /* AfiliacionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfiliacionViewModel.swift; sourceTree = "<group>"; };
 		9271EF19258D4D2E009659F4 /* AffiliateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffiliateModel.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9279D54C256F0D5400890C84 /* CodeScanner in Frameworks */,
+				924951E72629DDCF0033A96D /* PopupView in Frameworks */,
 				92DA82FC25F7B9D100E4834B /* CarBode in Frameworks */,
 				573DD5AA824DD586829F7E7E /* Pods_fastgi.framework in Frameworks */,
 				92C9723425F9573D005D2DBB /* SwiftUIX in Frameworks */,
@@ -325,6 +328,7 @@
 		92A3BA182553616F00DF3707 = {
 			isa = PBXGroup;
 			children = (
+				924951DA2629DB430033A96D /* fastgi wallet.entitlements */,
 				92A3BA232553616F00DF3707 /* fastgi */,
 				92A3BA222553616F00DF3707 /* Products */,
 				7087B4D9F9AA9607359709B4 /* Pods */,
@@ -630,6 +634,7 @@
 				92DA82FB25F7B9D100E4834B /* CarBode */,
 				92C9723325F9573D005D2DBB /* SwiftUIX */,
 				92543453260A44A600AE5F40 /* HorizonCalendar */,
+				924951E62629DDCF0033A96D /* PopupView */,
 			);
 			productName = fastgi;
 			productReference = 92A3BA212553616F00DF3707 /* fastgi wallet.app */;
@@ -664,6 +669,7 @@
 				92DA82FA25F7B9D100E4834B /* XCRemoteSwiftPackageReference "CarBode-Barcode-Scanner-For-SwiftUI" */,
 				92C9723225F9573D005D2DBB /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 				92543452260A44A500AE5F40 /* XCRemoteSwiftPackageReference "HorizonCalendar" */,
+				924951E52629DDCF0033A96D /* XCRemoteSwiftPackageReference "PopupView" */,
 			);
 			productRefGroup = 92A3BA222553616F00DF3707 /* Products */;
 			projectDirPath = "";
@@ -983,6 +989,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "fastgi wallet.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"fastgi/Preview Content\"";
@@ -1008,6 +1015,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "fastgi wallet.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1053,6 +1061,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		924951E52629DDCF0033A96D /* XCRemoteSwiftPackageReference "PopupView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/PopupView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.12;
+			};
+		};
 		92543452260A44A500AE5F40 /* XCRemoteSwiftPackageReference "HorizonCalendar" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/HorizonCalendar.git";
@@ -1096,6 +1112,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		924951E62629DDCF0033A96D /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 924951E52629DDCF0033A96D /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
+		};
 		92543453260A44A600AE5F40 /* HorizonCalendar */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 92543452260A44A500AE5F40 /* XCRemoteSwiftPackageReference "HorizonCalendar" */;
