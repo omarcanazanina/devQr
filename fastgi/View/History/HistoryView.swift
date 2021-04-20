@@ -129,20 +129,20 @@ struct HistoryView: View {
     
     var body: some View {
         VStack {
+            Button(action: {
+                self.action = 5
+            }){
+                Text("Filtrar")
+            }
+            NavigationLink(destination: CalendarView(), tag: 5, selection: self.$action) {
+                EmptyView()
+            }
             VStack{
                 Picker(selection: $optionPicker, label: Text("")) {
                     Text("Realizadas").tag(0)
                     Text("No realizadas").tag(1)
                 }.pickerStyle(SegmentedPickerStyle())
                 .padding()
-                Button(action: {
-                    self.action = 5
-                }){
-                    Text("Filtrar")
-                }
-                NavigationLink(destination: HistoryDateView(), tag: 5, selection: self.$action) {
-                    EmptyView()
-                }
                 if(optionPicker==0){
                     self.list
                     NavigationLink(destination: TransactionDetailView(fecha: self.fecha, hora: self.hora, empresa: self.empresa, phone: self.phone, monto: self.monto, dataUser: self.userDataVM.user, control: 0, fechaFormat: "", horaFormat: ""), tag: 1, selection: self.$action) {

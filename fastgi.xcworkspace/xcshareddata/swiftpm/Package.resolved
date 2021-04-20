@@ -20,12 +20,12 @@
         }
       },
       {
-        "package": "HorizonCalendar",
-        "repositoryURL": "https://github.com/airbnb/HorizonCalendar.git",
+        "package": "FSCalendar",
+        "repositoryURL": "https://github.com/WenchaoD/FSCalendar.git",
         "state": {
           "branch": null,
-          "revision": "4fa9d72c4e14bd99e8d7272acd9e88291daee824",
-          "version": "1.8.0"
+          "revision": "4e79a201fad268408a4fd9e2ef429497def9594f",
+          "version": "2.8.2"
         }
       },
       {
@@ -42,7 +42,7 @@
         "repositoryURL": "https://github.com/SwiftUIX/SwiftUIX",
         "state": {
           "branch": "master",
-          "revision": "004bee5f6b1bb0cd7b04e0d70bac18ca3736b032",
+          "revision": "b9d6c85b9379dc0f8887da80c3c8ab31b59845c3",
           "version": null
         }
       },

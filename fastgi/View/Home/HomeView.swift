@@ -403,12 +403,22 @@ struct HomeView: View {
                Button(action: {
                    self.action = 44
                }){
-                 Text("test1")
+                 Text("notifications")
                  }
                     
                     NavigationLink(destination: TestView(), tag: 44, selection: self.$action) {
                  EmptyView()
                  }
+                    Button(action: {
+                        self.action = 45
+                    }){
+                        Text("calendar")
+                    }
+                    
+                    NavigationLink(destination: CalendarView(), tag: 45, selection: self.$action) {
+                        EmptyView()
+                    }
+                    
                     /* //modal test
                     Button(action: {
                         self.modal.toggle()
