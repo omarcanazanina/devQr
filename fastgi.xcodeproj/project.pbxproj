@@ -23,6 +23,7 @@
 		924951F4262A32C40033A96D /* QrPaymentModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924951F3262A32C40033A96D /* QrPaymentModule.swift */; };
 		924951F7262A33BC0033A96D /* QrPaymentModuleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924951F6262A33BC0033A96D /* QrPaymentModuleResponse.swift */; };
 		924951FA262A33F10033A96D /* QrPaymentModuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924951F9262A33F10033A96D /* QrPaymentModuleModel.swift */; };
+		92571976263066E1009847A3 /* TransferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92571975263066E1009847A3 /* TransferView.swift */; };
 		925F07282580323000153B5A /* Afiliacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F07272580323000153B5A /* Afiliacion.swift */; };
 		925F072B2580372B00153B5A /* AfiliacionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F072A2580372B00153B5A /* AfiliacionViewModel.swift */; };
 		9271EF1A258D4D2E009659F4 /* AffiliateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9271EF19258D4D2E009659F4 /* AffiliateModel.swift */; };
@@ -39,7 +40,6 @@
 		9295E7992613768A00312054 /* DetalleTelefericoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295E7982613768A00312054 /* DetalleTelefericoView.swift */; };
 		9295E79D2613ABB900312054 /* FormUserTelefericoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295E79C2613ABB900312054 /* FormUserTelefericoView.swift */; };
 		9295E7A02613C4F300312054 /* ListCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295E79F2613C4F300312054 /* ListCardsView.swift */; };
-		929B4F5B260B94D40048B766 /* DayRangeIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929B4F5A260B94D40048B766 /* DayRangeIndicatorView.swift */; };
 		929B4F5F260BD6430048B766 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929B4F5E260BD6430048B766 /* TestView.swift */; };
 		929B4F63260BE5A70048B766 /* HistoryDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929B4F62260BE5A70048B766 /* HistoryDateView.swift */; };
 		92A3BA252553616F00DF3707 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A3BA242553616F00DF3707 /* AppDelegate.swift */; };
@@ -119,6 +119,7 @@
 		92B75E4A25B795C3005A2DCC /* EnterAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B75E4925B795C3005A2DCC /* EnterAmountView.swift */; };
 		92C9723425F9573D005D2DBB /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 92C9723325F9573D005D2DBB /* SwiftUIX */; };
 		92CA837C25D5C4EF00727F89 /* ChargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA837B25D5C4EF00727F89 /* ChargeView.swift */; };
+		92D674902636FE9E009A794D /* RequestMoneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D6748F2636FE9E009A794D /* RequestMoneyView.swift */; };
 		92DA82FC25F7B9D100E4834B /* CarBode in Frameworks */ = {isa = PBXBuildFile; productRef = 92DA82FB25F7B9D100E4834B /* CarBode */; };
 		92E3FE2425C0AA4A00320396 /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E3FE2325C0AA4A00320396 /* testView.swift */; };
 		92F43D8425FC1667009D58AD /* TestModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F43D8325FC1667009D58AD /* TestModalView.swift */; };
@@ -152,6 +153,7 @@
 		924951F3262A32C40033A96D /* QrPaymentModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrPaymentModule.swift; sourceTree = "<group>"; };
 		924951F6262A33BC0033A96D /* QrPaymentModuleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrPaymentModuleResponse.swift; sourceTree = "<group>"; };
 		924951F9262A33F10033A96D /* QrPaymentModuleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrPaymentModuleModel.swift; sourceTree = "<group>"; };
+		92571975263066E1009847A3 /* TransferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferView.swift; sourceTree = "<group>"; };
 		925F07272580323000153B5A /* Afiliacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Afiliacion.swift; sourceTree = "<group>"; };
 		925F072A2580372B00153B5A /* AfiliacionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfiliacionViewModel.swift; sourceTree = "<group>"; };
 		9271EF19258D4D2E009659F4 /* AffiliateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffiliateModel.swift; sourceTree = "<group>"; };
@@ -167,7 +169,6 @@
 		9295E7982613768A00312054 /* DetalleTelefericoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleTelefericoView.swift; sourceTree = "<group>"; };
 		9295E79C2613ABB900312054 /* FormUserTelefericoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormUserTelefericoView.swift; sourceTree = "<group>"; };
 		9295E79F2613C4F300312054 /* ListCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCardsView.swift; sourceTree = "<group>"; };
-		929B4F5A260B94D40048B766 /* DayRangeIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRangeIndicatorView.swift; sourceTree = "<group>"; };
 		929B4F5E260BD6430048B766 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		929B4F62260BE5A70048B766 /* HistoryDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDateView.swift; sourceTree = "<group>"; };
 		92A3BA212553616F00DF3707 /* fastgi wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fastgi wallet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,6 +247,7 @@
 		92AB8CFA2579B9E1006F0FA7 /* QrPaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrPaymentViewModel.swift; sourceTree = "<group>"; };
 		92B75E4925B795C3005A2DCC /* EnterAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAmountView.swift; sourceTree = "<group>"; };
 		92CA837B25D5C4EF00727F89 /* ChargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeView.swift; sourceTree = "<group>"; };
+		92D6748F2636FE9E009A794D /* RequestMoneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMoneyView.swift; sourceTree = "<group>"; };
 		92E3FE2325C0AA4A00320396 /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
 		92F43D8325FC1667009D58AD /* TestModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModalView.swift; sourceTree = "<group>"; };
 		C0100032257ACF3B00945FCA /* SlideFormJoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideFormJoinView.swift; sourceTree = "<group>"; };
@@ -320,6 +322,15 @@
 				9240083226015B0400B75AE3 /* TransactionDetailChargePayView.swift */,
 			);
 			path = ScanPayCharge;
+			sourceTree = "<group>";
+		};
+		92571974263066CB009847A3 /* Transfer */ = {
+			isa = PBXGroup;
+			children = (
+				92571975263066E1009847A3 /* TransferView.swift */,
+				92D6748F2636FE9E009A794D /* RequestMoneyView.swift */,
+			);
+			path = Transfer;
 			sourceTree = "<group>";
 		};
 		9295E78E26127FFE00312054 /* Teleferico */ = {
@@ -480,6 +491,7 @@
 		92A3BA9D2553675C00DF3707 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				92571974263066CB009847A3 /* Transfer */,
 				92266A2E26150DF100CDE792 /* InternalBox */,
 				9295E78E26127FFE00312054 /* Teleferico */,
 				924008212601535600B75AE3 /* ScanPayCharge */,
@@ -528,7 +540,6 @@
 				92A3BAB6255368A600DF3707 /* TermsAndConditionsView.swift */,
 				92A3BAB9255368BE00DF3707 /* SettingsView.swift */,
 				9202E996255DF485009115ED /* test.swift */,
-				929B4F5A260B94D40048B766 /* DayRangeIndicatorView.swift */,
 				929B4F5E260BD6430048B766 /* TestView.swift */,
 				92AA7BF4260E697D006CA008 /* Test2View.swift */,
 			);
@@ -759,6 +770,7 @@
 				92AB8CF82579B7F4006F0FA7 /* QrPaymentModel.swift in Sources */,
 				92A3BAB7255368A600DF3707 /* TermsAndConditionsView.swift in Sources */,
 				92A3BB0425536DB100DF3707 /* Optional+Extensions.swift in Sources */,
+				92D674902636FE9E009A794D /* RequestMoneyView.swift in Sources */,
 				92A3BAF325536B3400DF3707 /* BtnsView.swift in Sources */,
 				924951FA262A33F10033A96D /* QrPaymentModuleModel.swift in Sources */,
 				9284925C2603E7E2002CA258 /* DownloadQr.swift in Sources */,
@@ -819,7 +831,6 @@
 				92A3BA492553631C00DF3707 /* NavigationRoot.swift in Sources */,
 				92A3BA422553629F00DF3707 /* PhotoCaptureView.swift in Sources */,
 				92E3FE2425C0AA4A00320396 /* testView.swift in Sources */,
-				929B4F5B260B94D40048B766 /* DayRangeIndicatorView.swift in Sources */,
 				92A3BA292553616F00DF3707 /* ContentView.swift in Sources */,
 				92A3BA6E2553651C00DF3707 /* RecargaViewModel.swift in Sources */,
 				92A3BAD4255369EC00DF3707 /* InputCreditAmountView.swift in Sources */,
@@ -833,6 +844,7 @@
 				92A3BA512553638700DF3707 /* ImageAvatar.swift in Sources */,
 				92A3BA5B2553641100DF3707 /* Recargas.swift in Sources */,
 				9271EF1D258D4DC8009659F4 /* AffiliateResponse.swift in Sources */,
+				92571976263066E1009847A3 /* TransferView.swift in Sources */,
 				92A3BAF025536B1E00DF3707 /* ContentButtonsView.swift in Sources */,
 				9295E79D2613ABB900312054 /* FormUserTelefericoView.swift in Sources */,
 				92A3BA4D2553635F00DF3707 /* AuthState.swift in Sources */,
@@ -1017,7 +1029,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hegaro.fastgi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1044,7 +1056,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hegaro.fastgi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -62,7 +62,7 @@ struct HomeView: View {
         HStack{
             Button(action: {
                // self.showScannerTeleferico = true
-                self.action = 99
+                self.action = 1
             }){
                 VStack{
                     Image("Teleferico")
@@ -75,7 +75,7 @@ struct HomeView: View {
                 .frame(maxWidth:.infinity)
                 .shadow(color: Color.black.opacity(0.1), radius: 4, x: 2, y: 3)
             }
-            NavigationLink(destination: QrTelefericoView(dataUserlog: self.userDataVM.user), tag: 99, selection: self.$action) {
+            NavigationLink(destination: QrTelefericoView(dataUserlog: self.userDataVM.user), tag: 1, selection: self.$action) {
                 EmptyView()
             }
         }
@@ -106,7 +106,7 @@ struct HomeView: View {
         HStack{
             Button(action: {
                 self.showScannerTransporte = true
-                self.action = 1
+                //self.action = 2
                
             }){
                 HStack{
@@ -207,11 +207,11 @@ struct HomeView: View {
                             if scanDividido.count == 2 {
                                 self.userDataVM.DatosUserPay(id_usuario: String(scanDividido[1]))
                                  self.showScannerScan = false
-                                 self.action = 10
+                                 self.action = 2
                             }else{
                                 self.userDataVM.DatosUserPay(id_usuario: String(scanDividido[1]))
                                  self.showScannerScan = false
-                                 self.action = 10
+                                 self.action = 2
                                 self.montoPagoQR = String(scanDividido[2])
                                 print("el primero \(scanDividido[0])")
                                 print("el segundo \(scanDividido[1])")
@@ -224,11 +224,11 @@ struct HomeView: View {
                                 print("no tiene pagar \(self.resultadosScan)")
                                 self.userDataVM.DatosUserPay(id_usuario: String(scanDivididoCobrar[0]))
                                 self.showScannerScan = false
-                                self.action = 11
+                                self.action = 3
                             }else{
                                 self.userDataVM.DatosUserPay(id_usuario: String(scanDivididoCobrar[0]))
                                 self.showScannerScan = false
-                                self.action = 11
+                                self.action = 3
                                 self.montoCobroQR = String(scanDivididoCobrar[1])
                             }
                             
@@ -250,10 +250,10 @@ struct HomeView: View {
                 }
               
             }
-            NavigationLink(destination: ChargeView(dataUserPay: self.userDataVM.userResponsePay, dataUser: self.userDataVM.user, montoCobroQR: self.$montoCobroQR), tag: 11, selection: self.$action) {
+            NavigationLink(destination: ChargeView(dataUserPay: self.userDataVM.userResponsePay, dataUser: self.userDataVM.user, montoCobroQR: self.$montoCobroQR), tag: 3, selection: self.$action) {
                 EmptyView()
             }
-            NavigationLink(destination: PayScanView(dataUserPay: self.userDataVM.userResponsePay, dataUser: self.userDataVM.user, montoPagoQR: self.$montoPagoQR), tag: 10, selection: self.$action) {
+            NavigationLink(destination: PayScanView(dataUserPay: self.userDataVM.userResponsePay, dataUser: self.userDataVM.user, montoPagoQR: self.$montoPagoQR), tag: 2, selection: self.$action) {
                 EmptyView()
             }
            /* NavigationLink(destination: ChargeView(dataUserPay: self.userDataVM.userResponsePay), isActive: self.$userDataVM.nextPayview) {
@@ -300,7 +300,7 @@ struct HomeView: View {
     var btnIngresar:some View{
         HStack{
             Button(action: {
-                self.action = 3
+                self.action = 5
             }){
                 HStack{
                     VStack{
@@ -324,7 +324,7 @@ struct HomeView: View {
                 .frame(maxWidth:.infinity)
                 .shadow(color: Color.black.opacity(0.1), radius: 4, x: 2, y: 3)
             }
-            NavigationLink(destination: QrPayView( dataUserlog: self.userDataVM.user), tag: 3, selection: self.$action) {
+            NavigationLink(destination: QrPayView( dataUserlog: self.userDataVM.user), tag: 5, selection: self.$action) {
                 EmptyView()
             }
         }
@@ -333,7 +333,7 @@ struct HomeView: View {
     var btnRegisterCard:some View{
         HStack{
             Button(action: {
-                self.action = 12
+                self.action = 6
             }){
                 HStack{
                     VStack{
@@ -357,7 +357,73 @@ struct HomeView: View {
                  .frame(maxWidth:.infinity)
                  .shadow(color: Color.black.opacity(0.1), radius: 4, x: 2, y: 3)
             }
-            NavigationLink(destination: ListCreditCardView(), tag: 12, selection: self.$action) {
+            NavigationLink(destination: ListCreditCardView(), tag: 6, selection: self.$action) {
+                EmptyView()
+            }
+        }
+    }
+    
+    var btnEnvioDinero:some View{
+        HStack{
+            Button(action: {
+                self.action = 7
+            }){
+                HStack{
+                    VStack{
+                        Image(systemName: "arrow.up.square")
+                            .resizable()
+                            .frame(width:35, height: 35)
+                            .padding(15)
+                            .foregroundColor(Color.white)
+                        Text("Envio")
+                            .foregroundColor(Color.white)
+                            .font(.headline)
+                    }
+                    
+                }
+                .frame(width:100, height: 100)
+                .background(Color("primary"))
+                .cornerRadius(10)
+                .padding(5)
+                //
+               
+                .frame(maxWidth:.infinity)
+                .shadow(color: Color.black.opacity(0.1), radius: 4, x: 2, y: 3)
+            }
+            NavigationLink(destination: TransferView(), tag: 7, selection: self.$action) {
+                EmptyView()
+            }
+        }
+    }
+    
+    var btnPedirDinero:some View{
+        HStack{
+            Button(action: {
+                self.action = 8
+            }){
+                HStack{
+                    VStack{
+                        Image(systemName: "arrow.down.square")
+                            .resizable()
+                            .frame(width:35, height: 35)
+                            .padding(15)
+                            .foregroundColor(Color.white)
+                        Text("Pedir")
+                            .foregroundColor(Color.white)
+                            .font(.headline)
+                    }
+                    
+                }
+                .frame(width:100, height: 100)
+                .background(Color("primary"))
+                .cornerRadius(10)
+                .padding(5)
+                //
+               
+                .frame(maxWidth:.infinity)
+                .shadow(color: Color.black.opacity(0.1), radius: 4, x: 2, y: 3)
+            }
+            NavigationLink(destination: RequestMoneyView(), tag: 8, selection: self.$action) {
                 EmptyView()
             }
         }
@@ -400,6 +466,20 @@ struct HomeView: View {
                     
                 }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                 VStack{
+                    Text("Transferencias")
+                        .font(.caption)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                        .padding(.vertical,10)
+                    HStack(spacing:10){
+                        self.btnEnvioDinero
+                        self.btnPedirDinero
+                        Spacer()
+                            .frame(maxWidth:.infinity)
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                    
+                }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                
+                VStack{
                Button(action: {
                    self.action = 44
                }){
@@ -410,12 +490,12 @@ struct HomeView: View {
                  EmptyView()
                  }
                     Button(action: {
-                        self.action = 45
+                        self.action = 46
                     }){
-                        Text("calendar")
+                        Text("validacion")
                     }
                     
-                    NavigationLink(destination: CalendarView(), tag: 45, selection: self.$action) {
+                    NavigationLink(destination: Test2View(), tag: 46, selection: self.$action) {
                         EmptyView()
                     }
                     
