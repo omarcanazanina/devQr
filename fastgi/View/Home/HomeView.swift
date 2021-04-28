@@ -480,7 +480,7 @@ struct HomeView: View {
                 }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                 
                 VStack{
-               Button(action: {
+             /*  Button(action: {
                    self.action = 44
                }){
                  Text("notifications")
@@ -497,7 +497,7 @@ struct HomeView: View {
                     
                     NavigationLink(destination: Test2View(), tag: 46, selection: self.$action) {
                         EmptyView()
-                    }
+                    }*/
                     
                     /* //modal test
                     Button(action: {
